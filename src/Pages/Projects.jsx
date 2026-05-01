@@ -5,6 +5,7 @@ import Fleet from "../assets/fleetsystem.jpg";
 import Student from "../assets/StudentMarks.png";
 import Stadium from "../assets/stadium.jpg";
 import Login from "../assets/Loginform.jpg";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 
 
@@ -23,7 +24,7 @@ const projects = [
 id : 2,
 title : "Fleet vehicle Management System",
 description : "Managing vehicles shouldn't be a headache. I built a system that makes tracking, managing and organising a fleet simple, clean and efficient.",
-stack : ["Typescript , Pagination , MySQL , ASP.NET" ],
+stack : ["Typescript" , "Pagination" ," MySQL" , "ASP.NET" ],
 image : Fleet ,
 live : "/",
 github : "https://github.com/SepatakeTshepo/Fleet-Vehicle-Management.git",
@@ -47,7 +48,7 @@ github : "https://github.com/SepatakeTshepo/Fleet-Vehicle-Management.git",
   title : "Student Marks Capturing System",
   description : "Every student deserves to know where they stand. This system makes capturing and managing student marks straightforward for educators and transparent for students.",
   stack : ["HTMl" , "CSS " , "Spring boot " , "MYSQL"],
-  image : "/.Student",
+  image : Student,
    live : "/",
    github : "https://github.com/SepatakeTshepo/Login-form.git",
 },
@@ -89,10 +90,10 @@ return(
 
 
 <div key = {project.id}
-  className = {`${styles.card} ${isEven? styles.cardNormal : styles.card} ${ isEven ? styles.cardNormal : styles.cardReverse }`}
+  className = {`${styles.card} ${ isEven ? styles.cardNormal : styles.cardReverse }`}
 >
-  <div className="styles.imageWrapper">
-    <div className = "styles.imageGlow"/>
+  <div className={styles.imageWrapper}>
+    <div className = {styles.imageGlow}/>
     <img src={project.image}
     alt={project.title} 
     className={styles.image} 
@@ -108,14 +109,39 @@ return(
 
 
   <div className={styles.content}>
-<div className="styles.stack">
+<div className={styles.stack}>
 
-  {project.stack.map ((tech) =>
+  {project.stack.map ((tech) =>(
   <span key ={tech} className = {styles.tag}>{tech} </span>
-  )}
+  ))}
 
 
 </div>
+
+<h3 className= {styles.projectTitle}>{project.title}  </h3>
+<p className= {styles.description}>{project.description}</p>
+
+<div className={styles.buttons}>
+  <a 
+    href={project.live}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={styles.btnLive}
+  >
+    <FaExternalLinkAlt /> Live Demo
+  </a>
+  <a 
+  
+    href={project.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={styles.btnGithub}
+  >
+    <FaGithub /> GitHub
+  </a>
+</div>
+
+
 
   </div>
 
