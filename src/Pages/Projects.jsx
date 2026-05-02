@@ -64,7 +64,7 @@ return (
 
   <section className = {styles.Container}>
 
-
+ <div className={styles.blob} />
     <div className={styles.heading}>
       <span className= {styles.headingLine}/>
       <h2 className ={styles.title}>My Projects</h2>
@@ -108,7 +108,30 @@ return(
    
 
 
-  <div className={styles.content}>
+  <div className={styles.content}
+   /* onMouseMove={(e) => {
+    const rect = e.currentTarget.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
+    e.currentTarget.style.setProperty('--mouse-x', `${x}px`)
+    e.currentTarget.style.setProperty('--mouse-y', `${y}px`)
+  }}*/
+ onMouseMove={(e) => {
+    const rect = e.currentTarget.getBoundingClientRect()
+    const x = ((e.clientX - rect.left) / rect.width) * 100
+    const y = ((e.clientY - rect.top) / rect.height) * 100
+    e.currentTarget.style.setProperty('--mouse-x', `${x}%`)
+    e.currentTarget.style.setProperty('--mouse-y', `${y}%`)
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.setProperty('--mouse-x', `50%`)
+    e.currentTarget.style.setProperty('--mouse-y', `50%`)
+  }}
+>
+
+
+
+<h3 className= {styles.projectTitle}>{project.title}  </h3>
 <div className={styles.stack}>
 
   {project.stack.map ((tech) =>(
@@ -117,8 +140,6 @@ return(
 
 
 </div>
-
-<h3 className= {styles.projectTitle}>{project.title}  </h3>
 <p className= {styles.description}>{project.description}</p>
 
 <div className={styles.buttons}>
