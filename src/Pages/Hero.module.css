@@ -12,6 +12,17 @@
   opacity: 0;
   transition: opacity 5s ease;
   margin-top: 0;
+  background: (#918f91 0%,
+        #9f9e9e 30%,
+        #c2c1c1 60%,
+        #919092 100%) padding-box,
+    linear-gradient(
+      135deg,
+      rgba(59, 130, 246, 0.00) 0%,
+      transparent 90px,
+      transparent 90%,
+      rgba(59, 130, 246, 0.02) 10%
+    ) border-box;
 }
 
 .container.visible {
