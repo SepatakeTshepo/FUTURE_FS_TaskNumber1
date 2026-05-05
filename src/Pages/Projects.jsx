@@ -67,12 +67,12 @@ return (
  <div className={styles.blob} />
     <div className={styles.heading}>
       <span className= {styles.headingLine}/>
-      <h2 className ={styles.title}>My Projects</h2>
-      <span className = {styles.headingLine}/>
+      <h2 className ={styles.title}><span className={styles.color}>M</span>y Projects</h2>
+      
     </div>
 
 <div className = {styles.subtitle}>
-    <p> A selection of Projects ive built - from idea to development</p>
+    <p> A selection of Projects ive built </p>
 
 </div>
 

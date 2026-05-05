@@ -68,7 +68,7 @@
 }
 
 .greeting {
-  color: #022050;
+  color: #000e23;
   font-size: 60px;
   
   text-transform: uppercase;
@@ -90,7 +90,7 @@
   display:inline-block ;
   width: 100px;
   height: 2px;
-  background: #042861;
+  background: #000e23;;
   flex-shrink: 0;
    vertical-align: middle;
    margin-right: 0%;
@@ -100,7 +100,7 @@
 .highlight{
     font-family: 'Arial', sans-serif;
     
-    color: #032357;
+    color: #000e23;;
 }
 
 /* ── animated typing title ── */
@@ -122,17 +122,17 @@
 
 /* outline phase — text is hollow */
 .outline {
-  -webkit-text-stroke: 1.5px #3b82f6;
+  -webkit-text-stroke: 1.8px #000e23;;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
 /* filled phase — text fills with blue */
 .filled {
-  -webkit-text-stroke: 1.5px #002e78;
-  -webkit-text-fill-color: #002765;
+  -webkit-text-stroke: 1.5px #000e23;;
+  -webkit-text-fill-color: #000e23;;
   color: #001535;
-  text-shadow: 0 0 25px rgba(0, 39, 101, 0.6);
+  text-shadow: 0 0 25px rgba(0, 18, 47, 0.6);
 }
 
 /* blinking cursor */
@@ -140,8 +140,8 @@
   display: inline-block;
   margin-left: 2px;
   -webkit-text-stroke: 0;
-  -webkit-text-fill-color: #002867;
-  color: #02255d;
+  -webkit-text-fill-color: #000e23;;
+  color: #000e23;;
   animation: blink 0.8s step-end infinite;
 }
 
@@ -156,7 +156,7 @@
   font-size: 1rem;
   line-height: 1.7;
   max-width: 480px;
-  border-bottom: 1px solid color(srgb  blue);
+  border-bottom: 1px solid color(srgb  #000e23);
 }
 
 /* ── social icons ── */
@@ -174,13 +174,13 @@
 
 
 .icon{
-    color :blue;
+    color :#000e23;
     font-size: 38px;
     transition: color 0.2s, transform 0.2s;
 }
 
 .icon:hover {
-  color:  #2563eb;
+  color:  blue;
   transform: scale(1.3);
 }
 
@@ -223,7 +223,7 @@
 }
 
 .btnsecondary:hover {
-  background: rgba(2, 33, 84, 0.1);
+  background: rgba(2, 33, 84, 0.5);
   box-shadow: 0 0 20px rgba(2, 38, 96, 0.3);
 }
 
@@ -279,19 +279,19 @@
 object-position: top center;
  bottom: 0;
 transition: transform 0.3s ease;
- box-shadow: 0 0 30px rgba(3, 83, 140, 0.6);
- 
+ box-shadow: 0 0 10px rgba(0, 36, 62, 15);
+ border: 4px solid #5c5c5c;
 }
 .photo:hover {
   transform: scale(1.05); /* subtle zoom - not too much */
-  box-shadow: 0 0 90px rgba(1, 44, 77, 0.846);
+  box-shadow: 0 0 80px rgba(1, 27, 47, 0.843);
 }
 
 .divider{
     margin-top: 20px;
 width: 80%;
  height: 2px;
-background:  blue;
+  background: #032357;
     margin: 15px 0;
 }
 
@@ -303,29 +303,111 @@ background:  blue;
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
-    padding: 3rem 2rem;
+    height: auto;
+    min-height: 100vh;
+    padding: 2rem 1.5rem;
     text-align: center;
     align-items: center;
+    gap: 1.5rem;
   }
 
-  .tagline {
-    max-width: 100%;
+  .imageWrapper {
+     order: 2;
+    flex: unset;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 50px;
+    box-shadow: 0 0 30px rgba(0, 36, 62, 0.8);
+    margin: 0 auto;
+    display: block;
+  }
+
+  .content {
+    order: 1;
+    align-items: center;
+    width: 100%;
   }
 
   .icons {
+    order: 3;
     justify-content: center;
+    gap: 20px;
+  }
+
+  .greeting {
+    font-size: 2.5rem;
+  }
+
+  .names {
+    font-size: 1.5rem;
+  }
+
+  .titleText {
+    font-size: 1rem;
+  }
+
+  .nameLine {
+    width: 40px;
+  }
+
+  .tagline {
+    font-size: 0.85rem;
+    max-width: 100%;
   }
 
   .buttons {
     justify-content: center;
+    gap: 1rem;
+  }
+
+  .divider {
+    width: 60%;
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 1rem;
   }
 
   .imageWrapper {
-    flex: unset;
-    width: 260px;
+    width: 240px;
+    height: 2400px;
   }
 
   .photo {
-    height: 320px;
+    width: 240px;
+    height: 240px;
+  }
+
+  .greeting {
+    font-size: 2rem;
+  }
+
+  .names {
+    font-size: 1.2rem;
+  }
+
+  .btnprimary,
+  .btnsecondary {
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .icon {
+    font-size: 28px;
   }
 }

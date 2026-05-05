@@ -74,6 +74,7 @@ z-index: 1;
   flex-shrink: 0;
    vertical-align: middle;
    margin-right: 0%;
+flex-shrink: 1; 
 }
 
 .title{
@@ -240,14 +241,21 @@ z-index: 1;
 /* ── responsive ── */
 @media (max-width: 900px) {
   .section {
-    padding: 3rem 1.5rem;
+    padding: 2rem 1rem;
   }
 
+.bioTitle {
+  font-size : 25px;
+  
+}
   .content {
     flex-direction: column;
     gap: 2rem;
   }
+  .heading {
 
+margin-right: 35px;
+}
   .skillsWrapper {
     flex: unset;
     width: 100%;
