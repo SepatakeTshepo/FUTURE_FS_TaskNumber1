@@ -4,14 +4,14 @@
   position: relative;
   overflow: hidden;
   opacity: 0;
-  transform: translateY();
+  transform: translateY(30px);
 transition: opacity 0.8s ease, transform 0.8s ease;
 
 }
 
 .Container.visible{
   opacity: 1;
-  transform: scale(1);
+  transform: translateY(0);
 }
 
 .bolb {

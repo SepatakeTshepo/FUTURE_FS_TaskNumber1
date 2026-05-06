@@ -1,31 +1,15 @@
-const Footer = () =>{
-    
-    return (
+import React from 'react'
+import styles from './Footer.module.css'
 
-    <footer className = {styles.footer}>
-        <p className={styles.text}>   
-            Built with <span className={styles.highlight} >React</span>
-            {""}{""}
-            <span className={styles.highlight}>{new Date().getFullYear()}</span>
-        </p>
-
-        <div className="{styles.ticker}">
-            <div className="styles.track">
-                <span> HTML . CSS . JAVASCRIPT . REACT </span>
-                <span> HTML . CSS . JAVASCRIPT . REACT </span>
-
-
-
-            </div>
-
-
-
-        </div>
-
+const Footer = () => {
+  return (
+    <footer className={styles.footer}>
+      <p className={styles.text}>
+        Designed & Built by <span className={styles.name}>Tshepo Sepatake</span>
+      </p>
+      <p className={styles.copy}>© {new Date().getFullYear()} All rights reserved.</p>
     </footer>
-
-
-    )
+  )
 }
 
-export default Footer;
+export default Footer

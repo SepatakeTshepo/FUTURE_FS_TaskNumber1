@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef,useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope } from 'react-icons/fa'
 import styles from './Contacts.module.css'
@@ -25,9 +25,13 @@ const Contacts = () => {
       setStatus('error')
     })
   }
+ const [visible, setVisible] = useState(false)
 
+  useEffect(() => {
+    setTimeout(() => setVisible(true), 100)
+  }, [])
   return (
-    <section className={styles.section}>
+    <section className={`${styles.section} ${visible ? styles.visible : ''}`}>
 
       {/* scanline */}
       <div className={styles.scanline} />

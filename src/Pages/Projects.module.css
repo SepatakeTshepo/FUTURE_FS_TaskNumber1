@@ -5,10 +5,18 @@
    position: relative;
   overflow: hidden;
   min-height: 100vh;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+
 }
 
-
+.Container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 .color{
+  
   color: #00173b;
   font-size: 42px;
   
@@ -381,7 +389,7 @@ margin-right: 35px;
     margin-left:40px ;
   }
  .headingLine {
-    max-width: 60px;   /* shorter lines on mobile */
+    max-width: 67px;   /* shorter lines on mobile */
   }
   .title {
     font-size: 1.2rem;

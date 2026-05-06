@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "./Projects.module.css";
 import Portfolio from "../assets/Portfolio.png";
 import Fleet from "../assets/fleetsystem.jpg";
@@ -6,7 +6,7 @@ import Student from "../assets/StudentMarks.png";
 import Stadium from "../assets/stadium.jpg";
 import Login from "../assets/Loginform.jpg";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-
+import React, {  useEffect, useState } from "react";
 
 
 const projects = [
@@ -57,12 +57,17 @@ github : "https://github.com/SepatakeTshepo/Fleet-Vehicle-Management.git",
 
 
 
+
 ]
 const Projects = ()  =>{
+ const [visible, setVisible] = useState(false)
 
+  useEffect(() => {
+    setTimeout(() => setVisible(true), 100)
+  }, [])
 return (
 
-  <section className = {styles.Container}>
+  <section className={`${styles.Container} ${visible ? styles.visible : ''}`}>
 
  <div className={styles.blob} />
     <div className={styles.heading}>

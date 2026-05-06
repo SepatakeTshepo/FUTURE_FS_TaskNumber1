@@ -1,0 +1,36 @@
+.footer {
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+   background:
+    linear-gradient(#918f91 0%,
+        #ebebeb 30%,
+        #c2c1c1 60%,
+        #919092 100%) padding-box,
+    linear-gradient(
+      135deg,
+      rgba(59, 130, 246, 0.00) 0%,
+      transparent 90px,
+      transparent 90%,
+      rgba(59, 130, 246, 0.02) 10%
+    ) border-box;
+  border-top: 4px solid #5e5e5e;
+  position: relative;
+  z-index: 10;
+}
+
+.text {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.name {
+  color: #00173b;
+  font-weight: 700;
+}
+
+.copy {
+  color: #444;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}

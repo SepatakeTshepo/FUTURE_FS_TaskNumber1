@@ -30,9 +30,9 @@ const statsData = [
 const About = () => {
 
 const [ visible , setVisible ] = useState(false)
-const [ bioText , setBioText] =useState('')
+
 const [counts ,setCounts] = useState ([0,0,0])
-const bioIndex = useRef (0)
+
 
 //fade in
 
@@ -43,28 +43,7 @@ useEffect (() => {
 
 
 // typewriter bio
-useEffect(() => {
 
-const interval = setInterval (() => {
-
-if (bioIndex.current < fullBio.length){
-
-
-  setBioText(fullBio.slice (0 , bioIndex.current + 1))
-  bioIndex.current ++
-}else {
-
-  clearInterval (interval)
-}
-
-
-
-} , 30)
-
-return () => clearInterval (interval)
-}
-, []
-)
 
 
 // count up stats
@@ -117,10 +96,9 @@ return (
           </h3>
 
           {/* typewriter bio */}
-          <p className={styles.bioText}>
-            {bioText}
-            <span className={styles.cursor}>|</span>
-          </p>
+         <p className={styles.bioText}>
+  {fullBio}
+</p>
 
           {/* count up stats */}
           <div className={styles.stats}>
