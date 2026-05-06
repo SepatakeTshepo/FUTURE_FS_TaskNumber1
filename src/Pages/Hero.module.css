@@ -430,6 +430,10 @@ width: 80%;
   .container {
     padding: 1.5rem 1rem;
   }
+ html, body {
+    overflow: hidden;
+    height: 100%;
+  }
 
   .imageWrapper {
     width: 240px;
