@@ -274,6 +274,10 @@ flex-shrink: 1;
 }
 
 @media (max-width: 480px) {
+
+  .heading{
+    margin-left: 30px;
+  }
   .headingLine {
     width: 60%;
   }
