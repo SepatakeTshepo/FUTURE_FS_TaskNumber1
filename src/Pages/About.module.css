@@ -252,10 +252,7 @@ flex-shrink: 1;
     flex-direction: column;
     gap: 2rem;
   }
-  .heading {
-
-margin-right: 50px;
-}
+ 
   .skillsWrapper {
     flex: unset;
     width: 100%;
