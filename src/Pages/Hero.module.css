@@ -431,8 +431,8 @@ width: 80%;
     padding: 1.5rem 1rem;
   }
 .blob1 {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     top: -150px;
     left: -150px;
   }
@@ -444,6 +444,7 @@ width: 80%;
     right: 0;
     left: 0;
     top: unset;
+    margin-top: 10px;
     transform: none;
     width: 100%;
     display: flex;
