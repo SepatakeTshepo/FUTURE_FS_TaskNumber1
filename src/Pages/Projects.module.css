@@ -378,7 +378,7 @@ margin-right: 35px;
 
   .heading {
     gap: 0.2rem;
-    margin-right:20px ;
+    margin-left:20px ;
   }
  .headingLine {
     max-width: 60px;   /* shorter lines on mobile */
@@ -396,3 +396,4 @@ margin-right: 35px;
     padding: 2px 6px;
   }
 }
+
