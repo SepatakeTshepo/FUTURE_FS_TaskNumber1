@@ -242,8 +242,14 @@ flex-shrink: 1;
 @media (max-width: 900px) {
   .section {
     padding: 2rem 1rem;
+     flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-
+ .headingLine {
+    width: 80%;  /* shorter line on mobile */
+    margin: 0 auto;
+  }
 .bioTitle {
   font-size : 25px;
   
@@ -266,12 +272,14 @@ flex-shrink: 1;
     gap: 1.5rem;
   }
 }
+
 @media (max-width: 480px) {
+  .headingLine {
+    width: 60%;
+  }
 
-  .heading {
-
-margin-right: 10px;
-}
-
-
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 }
