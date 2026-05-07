@@ -430,7 +430,7 @@ width: 80%;
   .container {
     padding: 1.5rem 1rem;
       
-    overflow: hidden
+    overflow: hidden;
   }
 
 
@@ -438,7 +438,7 @@ width: 80%;
     width: 240px;
     height: 240px;
      position: fixed;
-    bottom: 0;           /* stick to bottom */
+             /* stick to bottom */
     right: 0;
     left: 0;
     top: unset;
