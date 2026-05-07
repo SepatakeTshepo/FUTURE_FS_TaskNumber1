@@ -482,7 +482,7 @@ width: 80%;
 
 @media (max-width: 480px) {
   .container {
-    padding: 1.5rem 1rem;
+    padding: 2rem 1.5rem;
     min-height: unset;
     height: auto;
   }
@@ -500,8 +500,8 @@ width: 80%;
   }
 
   .photo {
-    width: 200px;
-    height: 200px;
+    width: 240px;
+    height: 240px;
     object-fit: cover;
     object-position: top center;
     border-radius: 50px;
@@ -534,6 +534,6 @@ width: 80%;
   }
 
   .icon {
-    font-size: 28px;
+    font-size: 30px;
   }
 }
