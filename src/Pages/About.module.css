@@ -252,24 +252,33 @@ flex-shrink: 1;
   }
 .bioTitle {
   font-size : 25px;
+    text-align: center;
   
 }
   .content {
     flex-direction: column;
     gap: 2rem;
+    align-items: center; 
   }
-
+.bio {
+    align-items: center;  /* ← centers text inside bio */
+  }
   .skillsWrapper {
     flex: unset;
     width: 100%;
+     align-items: center;
   }
-
+ .heading {
+    justify-content: center;  /* ← centers the heading line + title */
+  
   .bioText {
     max-width: 100%;
+    text-align: center;
   }
 
   .stats {
     gap: 1.5rem;
+     justify-content: center;
   }
 }
 
