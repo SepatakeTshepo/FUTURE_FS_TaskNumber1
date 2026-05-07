@@ -439,18 +439,7 @@ width: 80%;
     height: 240px;
      position: fixed;
              /* stick to bottom */
-    right: 0;
-    left: 0;
-    top: unset;
-    margin-top: 10px;
-    transform: none;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: auto;
-    background: transparent;
-    z-index: 10;
-    margin: 0;
+    
    
   }
 
