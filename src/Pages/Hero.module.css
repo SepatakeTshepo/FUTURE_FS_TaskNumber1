@@ -425,7 +425,7 @@ width: 80%;
     margin: 10px auto;
   }
 }
-
+/*
 @media (max-width: 480px) {
   .container {
     padding: 1.5rem 1rem;
@@ -456,6 +456,63 @@ width: 80%;
     width: 240px;
     height: 240px;
     
+  }
+
+  .greeting {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .names {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .btnprimary,
+  .btnsecondary {
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  .icon {
+    font-size: 28px;
+  }
+}*/
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 1rem;
+    min-height: unset;
+    height: auto;
+  }
+
+  .imageWrapper {
+    position: relative;  /* ← kill the fixed */
+    width: auto;
+    height: auto;
+    bottom: unset;
+    right: unset;
+    left: unset;
+    padding: 0;
+    margin: 0 auto;
+    order: 2;            /* ← below content */
+  }
+
+  .photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 50px;
+  }
+
+  .content {
+    order: 1;
+  }
+
+  .icons {
+    order: 3;
   }
 
   .greeting {
