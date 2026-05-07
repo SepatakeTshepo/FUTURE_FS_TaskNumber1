@@ -489,14 +489,15 @@ width: 80%;
 
   .imageWrapper {
     position: relative;  /* ← kill the fixed */
-    width: 240px;
-    height: 240px;
+    width: auto;
+    height: auto;
     bottom: unset;
     right: unset;
     left: unset;
     padding: 0;
     margin: 0 auto;
-    order: 2;            /* ← below content */
+    order: 2;  
+    margin-bottom: 20px;          /* ← below content */
   }
 
   .photo {
