@@ -266,7 +266,7 @@ flex-shrink: 1;
   .skillsWrapper {
     flex: unset;
     width: 100%;
-     margin-right: 50%;
+     align-items: center;
   }
  .heading {
     justify-content: center;  /* ← centers the heading line + title */
