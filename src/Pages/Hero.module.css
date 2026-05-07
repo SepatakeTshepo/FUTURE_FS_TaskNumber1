@@ -430,7 +430,7 @@ width: 80%;
   .container {
     padding: 1.5rem 1rem;
       
-   overflow: hidden;
+   overflow: visible;
     flex-direction: column;
     align-items: center;
   }
@@ -439,25 +439,29 @@ width: 80%;
   .imageWrapper {
     width: 240px;
     height: 240px;
-  
+      position: sticky; 
              /* stick to bottom */
         width: 240px;
     height: 240px;
-    position:fixed; /* ← remove fixed, keep it in normal flow */
+    position:relative; /* ← remove fixed, keep it in normal flow */
     order: 2;           /* ← pushes image below content */
     margin: 1rem auto 0;
-   
+   top: 20px;
+    align-self: flex-start;
   }
 
   .photo {
     width: 240px;
     height: 240px;
-    
+      object-fit: cover;
+    object-position: top center;
+    border-radius: 50px;
     
   }
   .content {
     order: 1; /* ← content stays on top */
     width: 100%;
+     align-items: center;
   }
 
   .icons {
@@ -466,7 +470,16 @@ width: 80%;
   .greeting {
     font-size: 2rem;
   }
-
+.nameLine {
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background: #000e23;
+    flex-shrink: 0;
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+}
   .names {
     font-size: 1.2rem;
   }
