@@ -290,9 +290,35 @@ flex-shrink: 1;
   .headingLine {
     width: 1000%;
   }
+  .skills {
+    grid-template-columns: repeat(2, 1fr);  /* ← keeps 2 columns */
+    gap: 0.6rem;
+    width: 100%;
+  }
+ .skillCard {
+    padding: 0.7rem 0.8rem;  /* ← reduce padding so cards fit */
+    gap: 0.5rem;
+  }
+  .skillName {
+    font-size: 0.75rem;      /* ← slightly smaller text */
+  }
+  .skillsWrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
 
+  .heading {
+    margin-left: 0;          /* ← remove the 30px push */
+    justify-content: center;
+  }
+
+  .headingLine {
+    width: 40%;              /* ← fix the 1000% width causing overflow */
+  }
+}
   .title {
     font-size: 1.5rem;
     font-weight: bold;
   }
-}}
+}
