@@ -302,12 +302,13 @@ width: 80%;
 /* ── responsive ── */
 @media (max-width: 900px) {
   .container {
-    flex-direction: column;
+      flex-direction: column;
     height: auto;
     min-height: 100dvh;
     padding: 2rem 1.5rem;
     text-align: center;
     align-items: center;
+    justify-content: flex-start;  /* ← add this line */
     gap: 1.5rem;
      
   }
@@ -430,24 +431,27 @@ width: 80%;
   .container {
     padding: 1.5rem 1rem;
       
-   overflow: visible;
+    height: auto;
+    min-height: 100dvh;
+    padding: 2rem 1rem;
+    overflow: visible;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
   }
 
 
   .imageWrapper {
     width: 240px;
     height: 240px;
-      position: sticky; 
+      position: relative; 
              /* stick to bottom */
-        width: 240px;
-    height: 240px;
+     
     position:relative; /* ← remove fixed, keep it in normal flow */
     order: 2;           /* ← pushes image below content */
-    margin: 1rem auto 0;
-   top: 20px;
-    align-self: flex-start;
+   margin: 0 auto;
+    flex: unset;
   }
 
   .photo {
@@ -466,6 +470,7 @@ width: 80%;
 
   .icons {
     order: 3; /* ← icons go below image */
+     justify-content: center;
   }
   .greeting {
     font-size: 2rem;
@@ -493,4 +498,3 @@ width: 80%;
   .icon {
     font-size: 28px;
   }
-}
