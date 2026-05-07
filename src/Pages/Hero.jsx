@@ -84,7 +84,7 @@ useEffect(() => {
 
             <div className={styles.buttons}>
                 <Link to="/projects" className={styles.btnprimary}>View Projects</Link>
-                <Link to="/Contacts" className = {styles.btnsecondary}> Contact Me</Link>
+                <Link to="/Contact" className = {styles.btnsecondary}> Contact Me</Link>
 
                   </div>
             </div>
@@ -103,7 +103,7 @@ useEffect(() => {
             <FaLinkedin className={styles.icon} />
           </a>
         
-          <a href="https://wa.me/27821234567" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/27721877250" target="_blank" rel="noopener noreferrer">
             <FaWhatsapp className={styles.icon} />
           </a>
         </div>
