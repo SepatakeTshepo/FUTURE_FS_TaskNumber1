@@ -430,16 +430,22 @@ width: 80%;
   .container {
     padding: 1.5rem 1rem;
       
-    overflow: hidden;
+   overflow: hidden;
+    flex-direction: column;
+    align-items: center;
   }
 
 
   .imageWrapper {
     width: 240px;
     height: 240px;
-     position: fixed;
+  
              /* stick to bottom */
-    
+        width: 240px;
+    height: 240px;
+    position: relative; /* ← remove fixed, keep it in normal flow */
+    order: 2;           /* ← pushes image below content */
+    margin: 1rem auto 0;
    
   }
 
@@ -449,7 +455,14 @@ width: 80%;
     
     
   }
+  .content {
+    order: 1; /* ← content stays on top */
+    width: 100%;
+  }
 
+  .icons {
+    order: 3; /* ← icons go below image */
+  }
   .greeting {
     font-size: 2rem;
   }
