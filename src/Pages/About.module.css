@@ -298,6 +298,7 @@ flex-shrink: 1;
  .skillCard {
     padding: 0.7rem 0.8rem;  /* ← reduce padding so cards fit */
     gap: 0.5rem;
+    margin-right: 20px;
   }
   .skillName {
     font-size: 0.75rem;      /* ← slightly smaller text */
