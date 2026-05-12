@@ -316,7 +316,7 @@ flex-shrink: 1;
   .headingLine {
     width: 40%;              /* ← fix the 1000% width causing overflow */
   }
-}
+
   .title {
     font-size: 1.5rem;
     font-weight: bold;
